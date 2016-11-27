@@ -1,0 +1,42 @@
+{
+  "name": "gridcell",
+  "version": "1.0.0",
+  "description": "React based Grid+Cell",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
+    "build": "babel src -d lib",
+    "clean:docs": "rimraf docs/index.js",
+    "prebuild:docs": "npm run clean:docs",
+    "build:docs": "browserify docs/src/index.js -o docs/index.js -t [ babelify ]"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gingur/gridcell.git"
+  },
+  "keywords": [
+    "grid",
+    "cell",
+    "react"
+  ],
+  "author": "gingur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gingur/gridcell/issues"
+  },
+  "homepage": "https://github.com/gingur/gridcell#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "cxs": "^2.1.0",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "rimraf": "^2.5.4"
+  }
+}
